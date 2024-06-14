@@ -1,0 +1,16 @@
+release/gtextitem.o
+release/main.o
+release/mainwindow.o
+release/mfilemanager.o
+release/namelistmanager.o
+release/scenemanager.o
+release/workthread.o
+release/xypos.o
+release/qrc_index.o
+release/moc_gtextitem.o
+release/moc_mainwindow.o
+release/moc_mfilemanager.o
+release/moc_namelistmanager.o
+release/moc_scenemanager.o
+release/moc_workthread.o
+release/moc_xypos.o

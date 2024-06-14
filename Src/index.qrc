@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/hello">
+        <file>index.html</file>
+        <file>style.css</file>
+    </qresource>
+</RCC>
