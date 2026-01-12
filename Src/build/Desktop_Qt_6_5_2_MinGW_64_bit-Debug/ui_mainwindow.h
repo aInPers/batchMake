@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QGridLayout>
@@ -71,9 +72,10 @@ public:
     QGroupBox *groupBox_2;
     QGridLayout *gridLayout_6;
     QPushButton *importList_bt;
-    QPushButton *start_make_bt;
     QTextEdit *input_list;
+    QPushButton *start_make_bt;
     QRadioButton *isten;
+    QComboBox *picFormat;
     QGroupBox *groupBox_3;
     QGridLayout *gridLayout_7;
     QTableWidget *namelist;
@@ -252,7 +254,12 @@ public:
         importList_bt = new QPushButton(groupBox_2);
         importList_bt->setObjectName("importList_bt");
 
-        gridLayout_6->addWidget(importList_bt, 2, 0, 1, 2);
+        gridLayout_6->addWidget(importList_bt, 3, 0, 1, 2);
+
+        input_list = new QTextEdit(groupBox_2);
+        input_list->setObjectName("input_list");
+
+        gridLayout_6->addWidget(input_list, 0, 0, 3, 1);
 
         start_make_bt = new QPushButton(groupBox_2);
         start_make_bt->setObjectName("start_make_bt");
@@ -260,16 +267,19 @@ public:
 
         gridLayout_6->addWidget(start_make_bt, 0, 1, 1, 1);
 
-        input_list = new QTextEdit(groupBox_2);
-        input_list->setObjectName("input_list");
-
-        gridLayout_6->addWidget(input_list, 0, 0, 2, 1);
-
         isten = new QRadioButton(groupBox_2);
         isten->setObjectName("isten");
         isten->setChecked(true);
 
-        gridLayout_6->addWidget(isten, 1, 1, 1, 1);
+        gridLayout_6->addWidget(isten, 2, 1, 1, 1);
+
+        picFormat = new QComboBox(groupBox_2);
+        picFormat->addItem(QString());
+        picFormat->addItem(QString());
+        picFormat->addItem(QString());
+        picFormat->setObjectName("picFormat");
+
+        gridLayout_6->addWidget(picFormat, 1, 1, 1, 1);
 
 
         gridLayout_4->addWidget(groupBox_2, 0, 1, 1, 1);
@@ -341,6 +351,10 @@ public:
         importList_bt->setText(QCoreApplication::translate("MainWindow", "\345\257\274\345\205\245", nullptr));
         start_make_bt->setText(QCoreApplication::translate("MainWindow", "\345\274\200\345\247\213\345\210\266\344\275\234", nullptr));
         isten->setText(QCoreApplication::translate("MainWindow", "\344\275\277\347\224\25010\350\277\233\345\210\266\351\207\217", nullptr));
+        picFormat->setItemText(0, QCoreApplication::translate("MainWindow", "JPG", nullptr));
+        picFormat->setItemText(1, QCoreApplication::translate("MainWindow", "JPEG", nullptr));
+        picFormat->setItemText(2, QCoreApplication::translate("MainWindow", "PNG", nullptr));
+
         groupBox_3->setTitle(QCoreApplication::translate("MainWindow", "\345\220\215\345\215\225\351\242\204\350\247\210", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(batchmake_paper), QCoreApplication::translate("MainWindow", "\346\211\271\351\207\217\345\210\266\344\275\234", nullptr));
     } // retranslateUi

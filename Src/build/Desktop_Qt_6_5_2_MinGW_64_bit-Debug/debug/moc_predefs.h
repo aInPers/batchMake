@@ -84,7 +84,6 @@
 #define __FLT32_MAX_10_EXP__ 38
 #define __FLT64X_EPSILON__ 1.08420217248550443400745280086994171e-19F64x
 #define __STDC_HOSTED__ 1
-#define __FLT32X_HAS_DENORM__ 1
 #define __DEC64_MIN_EXP__ (-382)
 #define __WIN64 1
 #define __cpp_decltype_auto 201304L
@@ -139,6 +138,7 @@
 #define __INTPTR_WIDTH__ 64
 #define __FLT64X_HAS_INFINITY__ 1
 #define __UINT_LEAST32_MAX__ 0xffffffffU
+#define __FLT32X_HAS_DENORM__ 1
 #define __INT_FAST16_TYPE__ short int
 #define __MMX_WITH_SSE__ 1
 #define _fastcall __attribute__((__fastcall__))
