@@ -31,7 +31,7 @@ public:
     void setXYPos(XYpos* xypos);
     void setNameList(NameListManager *list);
     void changeAllText(QStringList strli);
-    void saveImage(const QString& filename, const char* format = nullptr);
+    void saveImage(const QString& filename, const char* format = nullptr) noexcept;
     void setModes(QButtonGroup* modes);
 
 public slots:

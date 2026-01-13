@@ -53,7 +53,7 @@ void MainWindow::addText(){
 }
 
 void MainWindow::setBackImage(){
-    QString filename = QFileDialog::getOpenFileName(this, "打开图片", mfm->getdesktopdir(), "图片(*.jpg);;网络图片(*.png)");
+    QString filename = QFileDialog::getOpenFileName(this, "打开图片", mfm->getdesktopdir(), "图片(*.jpg);;网络图片(*.png);;文件(*.*)");
     if(filename.isEmpty()){ return; }
     QPixmap* pixmap = mfm->getPixmap(filename);
     qDebug() << modegroup->checkedId();
@@ -144,7 +144,7 @@ void MainWindow::Start_(){
     {
         for(QStringList &li : namelist){
             smgr->changeAllText(li);
-            smgr->saveImage(FolderName+"/"+li.at(0)+QString::number(v)+"."+ui->picFormat->currentText().toLower(), ui->picFormat->currentText().toUtf8().constData());
+            smgr->saveImage(FolderName+"/"+QString::number(v)+"."+ui->picFormat->currentText().toLower(), ui->picFormat->currentText().toUtf8().constData());
             ui->progressBar->setValue(v);
             v++;
         }

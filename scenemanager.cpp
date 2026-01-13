@@ -122,7 +122,7 @@ void SceneManager::changeAllText(QStringList strli){
     }
 }
 
-void SceneManager::saveImage(const QString& filename, const char* format){
+void SceneManager::saveImage(const QString& filename, const char* format) noexcept{
     QPixmap img{scene->sceneRect().size().toSize()};
     img.fill(QColor{0, 0, 0, 0});
     QPainter painter(&img);
